@@ -8,10 +8,11 @@ palindromo("x");
 
 
 function palindromo(s){
-  if (s.length <= 1){
-    console.log(s + "é palíndromo");
+  for (var i = 0 , j = s.length -1; i < j; i++, j--){
+    if(s.charAt(i) != s.charAt(j)){
+      console.log(s + "não é palíndromo");
+      return;
+    }
   }
-  else {
-    console.log(s + "é indefinido");
-  }
+  console.log(s + "é palíndromo");
 }
